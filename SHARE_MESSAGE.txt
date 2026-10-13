@@ -1,0 +1,10 @@
+分享一个橙色帽衫、长垂耳的软萌桌宠「傲慢的小肉包」🍊
+
+会眨眼、挥手、小跑、跳跃、等待和思考，完整版还带16个看向方向。
+
+下载并解压 xrb-share-v1.0.0.zip，先看 README.md：
+• 支持 v2 的桌面安装入口或 Pets 插件：用 assets/spritesheet-v2.png。
+• 要求1536×1872的网页/旧版上传入口：用 assets/spritesheet-v1.png。
+• 想看效果：打开 previews/all-states.gif。
+
+请传 ZIP 或 PNG 原文件，避免聊天图片压缩。素材包需要搭配支持的客户端使用。

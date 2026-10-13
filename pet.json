@@ -1,0 +1,327 @@
+{
+  "name": "傲慢的小肉包",
+  "slug": "xrb",
+  "package_version": "1.0.0",
+  "description": "橙色嫩芽帽衫、奶黄色长垂耳的软萌小伙伴，陪你专注工作。",
+  "artwork_generator": "OpenAI built-in image_gen",
+  "preferred_sprite_version": 2,
+  "variants": {
+    "v2": {
+      "file": "assets/spritesheet-v2.png",
+      "width": 1536,
+      "height": 2288,
+      "columns": 8,
+      "rows": 11,
+      "populated_frames": 73
+    },
+    "v1": {
+      "file": "assets/spritesheet-v1.png",
+      "width": 1536,
+      "height": 1872,
+      "columns": 8,
+      "rows": 9,
+      "populated_frames": 57,
+      "derived_from": "v2 first nine rows"
+    }
+  },
+  "cell": {
+    "width": 192,
+    "height": 208
+  },
+  "animation_rows": [
+    {
+      "row": 0,
+      "state": "idle",
+      "frame_count": 6,
+      "durations_ms": [
+        280,
+        110,
+        110,
+        140,
+        140,
+        320
+      ],
+      "frame_files": [
+        "frames/idle/00.png",
+        "frames/idle/01.png",
+        "frames/idle/02.png",
+        "frames/idle/03.png",
+        "frames/idle/04.png",
+        "frames/idle/05.png"
+      ]
+    },
+    {
+      "row": 1,
+      "state": "running-right",
+      "frame_count": 8,
+      "durations_ms": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "frame_files": [
+        "frames/running-right/00.png",
+        "frames/running-right/01.png",
+        "frames/running-right/02.png",
+        "frames/running-right/03.png",
+        "frames/running-right/04.png",
+        "frames/running-right/05.png",
+        "frames/running-right/06.png",
+        "frames/running-right/07.png"
+      ]
+    },
+    {
+      "row": 2,
+      "state": "running-left",
+      "frame_count": 8,
+      "durations_ms": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "frame_files": [
+        "frames/running-left/00.png",
+        "frames/running-left/01.png",
+        "frames/running-left/02.png",
+        "frames/running-left/03.png",
+        "frames/running-left/04.png",
+        "frames/running-left/05.png",
+        "frames/running-left/06.png",
+        "frames/running-left/07.png"
+      ]
+    },
+    {
+      "row": 3,
+      "state": "waving",
+      "frame_count": 4,
+      "durations_ms": [
+        140,
+        140,
+        140,
+        280
+      ],
+      "frame_files": [
+        "frames/waving/00.png",
+        "frames/waving/01.png",
+        "frames/waving/02.png",
+        "frames/waving/03.png"
+      ]
+    },
+    {
+      "row": 4,
+      "state": "jumping",
+      "frame_count": 5,
+      "durations_ms": [
+        140,
+        140,
+        140,
+        140,
+        280
+      ],
+      "frame_files": [
+        "frames/jumping/00.png",
+        "frames/jumping/01.png",
+        "frames/jumping/02.png",
+        "frames/jumping/03.png",
+        "frames/jumping/04.png"
+      ]
+    },
+    {
+      "row": 5,
+      "state": "failed",
+      "frame_count": 8,
+      "durations_ms": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        240
+      ],
+      "frame_files": [
+        "frames/failed/00.png",
+        "frames/failed/01.png",
+        "frames/failed/02.png",
+        "frames/failed/03.png",
+        "frames/failed/04.png",
+        "frames/failed/05.png",
+        "frames/failed/06.png",
+        "frames/failed/07.png"
+      ]
+    },
+    {
+      "row": 6,
+      "state": "waiting",
+      "frame_count": 6,
+      "durations_ms": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        260
+      ],
+      "frame_files": [
+        "frames/waiting/00.png",
+        "frames/waiting/01.png",
+        "frames/waiting/02.png",
+        "frames/waiting/03.png",
+        "frames/waiting/04.png",
+        "frames/waiting/05.png"
+      ]
+    },
+    {
+      "row": 7,
+      "state": "running",
+      "frame_count": 6,
+      "durations_ms": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "frame_files": [
+        "frames/running/00.png",
+        "frames/running/01.png",
+        "frames/running/02.png",
+        "frames/running/03.png",
+        "frames/running/04.png",
+        "frames/running/05.png"
+      ]
+    },
+    {
+      "row": 8,
+      "state": "review",
+      "frame_count": 6,
+      "durations_ms": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        280
+      ],
+      "frame_files": [
+        "frames/review/00.png",
+        "frames/review/01.png",
+        "frames/review/02.png",
+        "frames/review/03.png",
+        "frames/review/04.png",
+        "frames/review/05.png"
+      ]
+    }
+  ],
+  "look_directions": [
+    {
+      "degrees_clockwise_from_up": 0.0,
+      "row": 9,
+      "column": 0,
+      "frame_file": "frames/look/000.png"
+    },
+    {
+      "degrees_clockwise_from_up": 22.5,
+      "row": 9,
+      "column": 1,
+      "frame_file": "frames/look/022.5.png"
+    },
+    {
+      "degrees_clockwise_from_up": 45.0,
+      "row": 9,
+      "column": 2,
+      "frame_file": "frames/look/045.png"
+    },
+    {
+      "degrees_clockwise_from_up": 67.5,
+      "row": 9,
+      "column": 3,
+      "frame_file": "frames/look/067.5.png"
+    },
+    {
+      "degrees_clockwise_from_up": 90.0,
+      "row": 9,
+      "column": 4,
+      "frame_file": "frames/look/090.png"
+    },
+    {
+      "degrees_clockwise_from_up": 112.5,
+      "row": 9,
+      "column": 5,
+      "frame_file": "frames/look/112.5.png"
+    },
+    {
+      "degrees_clockwise_from_up": 135.0,
+      "row": 9,
+      "column": 6,
+      "frame_file": "frames/look/135.png"
+    },
+    {
+      "degrees_clockwise_from_up": 157.5,
+      "row": 9,
+      "column": 7,
+      "frame_file": "frames/look/157.5.png"
+    },
+    {
+      "degrees_clockwise_from_up": 180.0,
+      "row": 10,
+      "column": 0,
+      "frame_file": "frames/look/180.png"
+    },
+    {
+      "degrees_clockwise_from_up": 202.5,
+      "row": 10,
+      "column": 1,
+      "frame_file": "frames/look/202.5.png"
+    },
+    {
+      "degrees_clockwise_from_up": 225.0,
+      "row": 10,
+      "column": 2,
+      "frame_file": "frames/look/225.png"
+    },
+    {
+      "degrees_clockwise_from_up": 247.5,
+      "row": 10,
+      "column": 3,
+      "frame_file": "frames/look/247.5.png"
+    },
+    {
+      "degrees_clockwise_from_up": 270.0,
+      "row": 10,
+      "column": 4,
+      "frame_file": "frames/look/270.png"
+    },
+    {
+      "degrees_clockwise_from_up": 292.5,
+      "row": 10,
+      "column": 5,
+      "frame_file": "frames/look/292.5.png"
+    },
+    {
+      "degrees_clockwise_from_up": 315.0,
+      "row": 10,
+      "column": 6,
+      "frame_file": "frames/look/315.png"
+    },
+    {
+      "degrees_clockwise_from_up": 337.5,
+      "row": 10,
+      "column": 7,
+      "frame_file": "frames/look/337.5.png"
+    }
+  ],
+  "note": "Portable reference metadata; pet.json is not an official automatic-import manifest."
+}

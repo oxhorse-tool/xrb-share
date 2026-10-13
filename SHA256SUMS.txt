@@ -1,0 +1,3 @@
+9856d68d443805641fd562ad2eb938afab66338cf52175cc945186e6f1e645db  assets/portrait.png
+08ca68643024970fc21d232d200c936e597b776ab065067d02b4cc95c3e8973b  assets/spritesheet-v1.png
+dcab4ebd722e507e17b77344401bfe9bfcbe5d6fb0f030f217f7f81e197ae4fa  assets/spritesheet-v2.png

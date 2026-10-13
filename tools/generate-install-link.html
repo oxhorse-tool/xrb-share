@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>傲慢的小肉包 · 安装链接生成器</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;padding:32px 16px;background:#fff8ef;color:#453421;font:16px/1.65 system-ui,sans-serif}
+    main{max-width:700px;margin:0 auto;background:#fff;border:1px solid #edd7bd;border-radius:20px;padding:28px}
+    .hero{display:flex;align-items:center;gap:20px}.hero img{width:96px;height:104px;object-fit:contain}h1{margin:0;font-size:27px}p{margin:12px 0}label{display:block;margin:20px 0 6px;font-weight:600}
+    input,select,textarea{width:100%;padding:12px;border:1px solid #d9c4ab;border-radius:9px;color:inherit;background:white;font:inherit}textarea{font:13px/1.5 ui-monospace,monospace;min-height:100px;resize:vertical}
+    button,.button{display:inline-block;margin:16px 8px 0 0;padding:10px 18px;border:0;border-radius:9px;background:#b85017;color:#fff;font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
+    .secondary{background:#f4eadc;color:#453421}.small{font-size:14px;color:#715b43}#message{min-height:24px;color:#955115}a{color:#974616}[hidden]{display:none!important}
+  </style>
+</head>
+<body>
+<main>
+  <div class="hero"><img src="../assets/portrait.png" alt="傲慢的小肉包"><div><h1>给傲慢的小肉包生成安装链接 🍊</h1><div class="small">填写自己的图片托管地址，即可打开桌面安装入口。</div></div></div>
+  <p>先将精灵图上传到可公开访问的地方。这里需要直接返回 PNG 的 HTTPS 地址，不能是仓库介绍页或图片预览页面。</p>
+  <form id="form">
+    <label for="url">精灵图 HTTPS 直链</label>
+    <input id="url" type="url" required placeholder="粘贴公开的 spritesheet-v2.png 图片直链" autocomplete="off">
+    <label for="version">精灵图版本</label>
+    <select id="version"><option value="2">v2 完整版 · 1536×2288</option><option value="1">v1 兼容版 · 1536×1872</option></select>
+    <button type="submit">生成链接</button>
+  </form>
+  <p id="message" role="status" aria-live="polite"></p>
+  <section id="result" hidden>
+    <label for="link">安装链接</label><textarea id="link" readonly></textarea>
+    <a id="install" class="button" href="#">打开安装入口</a><button id="copy" type="button" class="secondary">复制链接</button>
+    <label for="markdown">用于 GitHub README 的 Markdown</label><textarea id="markdown" readonly></textarea>
+    <button id="copyMarkdown" type="button" class="secondary">复制 Markdown</button>
+  </section>
+  <p class="small">此页面在本地拼接链接，不上传任何内容。点击安装需要客户端支持 Pets 安装入口；生成器不会检查远程文件的内容与可访问性。</p>
+  <p class="small"><a href="https://learn.chatgpt.com/docs/app/commands" target="_blank" rel="noopener">官方安装入口说明</a> · <a href="../README.md">阅读使用说明</a></p>
+</main>
+<script src="install-link.js"></script>
+<script>
+  const get = id => document.getElementById(id);
+  get('form').addEventListener('submit', event => {
+    event.preventDefault();
+    try {
+      const link = buildPetInstallLink(get('url').value, get('version').value);
+      get('link').value = link;
+      get('markdown').value = '[安装傲慢的小肉包 🍊](' + link + ')';
+      get('install').href = link;
+      get('result').hidden = false;
+      get('message').textContent = '链接已生成。请确认图片地址可公开访问，然后打开安装入口。';
+    } catch (error) {
+      get('result').hidden = true;
+      get('message').textContent = error.message;
+    }
+  });
+  async function copyField(id) {
+    const field = get(id);
+    try { await navigator.clipboard.writeText(field.value); get('message').textContent = '已复制。'; }
+    catch { field.focus(); field.select(); get('message').textContent = '请按 Ctrl+C 或 Command+C 手动复制选中的内容。'; }
+  }
+  get('copy').addEventListener('click', () => copyField('link'));
+  get('copyMarkdown').addEventListener('click', () => copyField('markdown'));
+</script>
+</body>
+</html>

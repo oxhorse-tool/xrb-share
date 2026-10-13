@@ -1,0 +1,37 @@
+{
+  "package_version": "1.0.0",
+  "v2": {
+    "file": "assets/spritesheet-v2.png",
+    "layout_valid": true,
+    "pets_preflight_valid": true,
+    "quality_valid": true,
+    "direction_blind_review_valid": true,
+    "sha256": "dcab4ebd722e507e17b77344401bfe9bfcbe5d6fb0f030f217f7f81e197ae4fa",
+    "encoded_bytes": 2563008
+  },
+  "v1": {
+    "file": "assets/spritesheet-v1.png",
+    "layout_valid": true,
+    "sha256": "08ca68643024970fc21d232d200c936e597b776ab065067d02b4cc95c3e8973b",
+    "encoded_bytes": 2034711,
+    "derivation": "Pixel-identical first nine rows of approved v2 atlas"
+  },
+  "jump": {
+    "idle_baseline": 203,
+    "jump_baselines": [
+      203,
+      188,
+      166,
+      192,
+      203
+    ],
+    "airborne_lift_pixels": 37,
+    "landing_delta_pixels": 0
+  },
+  "review_notes": [
+    "Intermediate look directions are subtle; some neighbors are similar.",
+    "No new remote upload was performed while packaging; v2 preflight refers to the unchanged approved bytes."
+  ],
+  "name": "傲慢的小肉包",
+  "update": "Display and installation names changed; sprite pixels and validation hashes preserved."
+}
